@@ -1,0 +1,108 @@
+/* Page wrapper */
+.training-page {
+  padding: 40px;
+  background-color: #f5f7fb;
+  min-height: 100vh;
+}
+
+/* Card */
+.training-card {
+  max-width: 700px;
+  margin: auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Title */
+.training-card h2 {
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.training-card p {
+  margin-bottom: 25px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Form grid */
+.training-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* Full width fields */
+.full-width {
+  grid-column: span 2;
+}
+
+/* ✅ FIXED LABEL SPACING */
+.training-form label {
+  font-size: 13px;
+  color: #374151;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;              /* space between label text and input */
+  margin-bottom: 14px;  /* ✅ space between each field */
+}
+
+/* Inputs */
+.training-form input,
+.training-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+}
+
+.training-form input:focus,
+.training-form textarea:focus {
+  border-color: #2563eb;
+}
+
+/* Slider */
+.rpe-container {
+  grid-column: span 2;
+}
+
+.rpe-value {
+  text-align: right;
+  font-size: 13px;
+  color: #2563eb;
+  margin-top: 5px;
+}
+
+/* Buttons */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+  grid-column: span 2;
+}
+
+.btn-cancel {
+  background: #e5e7eb;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-save {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-save:hover {
+  background: #1e40af;
+}

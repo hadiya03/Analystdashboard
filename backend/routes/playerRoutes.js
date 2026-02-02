@@ -1,0 +1,31 @@
+/*const express = require("express");
+const router = express.Router();
+const { createPlayer } = require("../controllers/playerController");
+
+router.post("/", createPlayer);
+
+module.exports = router;*/
+
+
+const express = require("express");
+const router = express.Router();
+
+const {
+  createPlayer,
+  getPlayers,
+  deletePlayer, // ✅ added
+} = require("../controllers/playerController");
+
+// POST  /api/players
+router.post("/players", createPlayer);
+
+// GET   /api/players
+router.get("/players", getPlayers);
+
+// DELETE /api/players/:id
+router.delete("/players/:id", deletePlayer); // ✅ added
+
+module.exports = router;
+
+
+
