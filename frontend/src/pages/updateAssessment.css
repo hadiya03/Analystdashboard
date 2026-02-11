@@ -1,0 +1,115 @@
+/*.assessment-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 24px;
+}
+
+.assessment-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.assessment-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.assessment-form input {
+  padding: 8px;
+  margin-top: 4px;
+}
+
+.primary {
+  background: #007bff;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.results {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1;
+  background: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.actions {
+  margin-top: 30px;
+}*/
+
+
+
+
+
+
+
+.assessment-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 24px;
+}
+
+.assessment-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.assessment-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.assessment-form input {
+  padding: 8px;
+  margin-top: 4px;
+}
+
+/* Primary button */
+.primary {
+  background: #007bff;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Result cards */
+.results {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1;
+  background: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Back button in Update Assessment page */
+.actions button.back-btn {
+  background: #007bff; /* blue */
+  color: white;
+}
+
+.actions {
+  margin-top: 30px;
+}
