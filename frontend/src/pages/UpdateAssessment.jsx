@@ -168,6 +168,7 @@ const UpdateAssessment = () => {
         setLoading(true);
         
         const resMetrics = await fetch(`http://localhost:5000/api/players/${id}/daily-input`);
+        
         if (resMetrics.ok) {
           const data = await resMetrics.json();
           if (data) setPlayerInput(data);
