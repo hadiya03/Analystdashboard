@@ -37,6 +37,14 @@ const Sidebar = () => {
         <NavLink to="/training-sessions" className="nav-item">
           🏋️ <span>Training Sessions</span>
         </NavLink>
+        <NavLink
+          to="/team-analysis"
+          className={({ isActive }) =>
+            isActive ? "nav-item active" : "nav-item"
+          }
+        >
+          TeamAnalytics
+        </NavLink>
 
         <NavLink to="/players" className="nav-item">
           👥 <span>Players</span>
