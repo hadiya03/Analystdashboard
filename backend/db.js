@@ -4,7 +4,7 @@ const pool = new Pool({
   user: "postgres",
   host: "localhost",
   database: "mern_db",
-  password: "hadiyamk",
+  password: "postgres",
   port: 5432,
 });
 
