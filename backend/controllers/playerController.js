@@ -1,137 +1,3 @@
-
-
-
-
-
-
-
-
-/*const pool = require("../db");
-
-
-exports.createPlayer = async (req, res) => {
-  try {
-    const {
-      name,
-      position,
-      age,
-      weight,
-      height,
-      preferred_foot,
-      current_team,
-      readiness_score,
-      fatigue_score,
-      risk_indicators,
-      readiness_history,
-      profile_image,
-    } = req.body;
-
-    if (!name) {
-      return res.status(400).json({ message: "Name is required" });
-    }
-
-    const query = `
-      INSERT INTO players (
-        name,
-        position,
-        age,
-        weight,
-        height,
-        preferred_foot,
-        current_team,
-        readiness_score,
-        fatigue_score,
-        risk_indicators,
-        readiness_history,
-        profile_image
-      )
-      VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
-      RETURNING *;
-    `;
-
-    const values = [
-      name,
-      position || null,
-      age ?? null,
-      weight ?? null,
-      height ?? null,
-      preferred_foot || null,
-      current_team || null,
-      readiness_score ?? null,
-      fatigue_score ?? null,
-      risk_indicators ? JSON.stringify(risk_indicators) : JSON.stringify([]),
-      readiness_history ? JSON.stringify(readiness_history) : JSON.stringify([]),
-      profile_image || null,
-    ];
-
-    const result = await pool.query(query, values);
-
-    res.status(201).json(result.rows[0]);
-  } catch (error) {
-    console.error("Create Player Error:", error);
-    res.status(500).json({ message: "Failed to create player" });
-  }
-};
-
-
-exports.getPlayers = async (req, res) => {
-  try {
-    const query = `
-      SELECT
-        id,
-        name,
-        position,
-        age,
-        weight,
-        height,
-        preferred_foot,
-        current_team,
-        readiness_score,
-        fatigue_score,
-        risk_indicators,
-        readiness_history,
-        profile_image,
-        created_at
-      FROM players
-      ORDER BY created_at DESC;
-    `;
-
-    const result = await pool.query(query);
-
-    res.status(200).json(result.rows);
-  } catch (error) {
-    console.error("Get Players Error:", error);
-    res.status(500).json({ message: "Failed to fetch players" });
-  }
-};
-
-
-exports.deletePlayer = async (req, res) => {
-  try {
-    const { id } = req.params;
-
-    const query = `DELETE FROM players WHERE id = $1 RETURNING *;`;
-    const result = await pool.query(query, [id]);
-
-    if (result.rowCount === 0) {
-      return res.status(404).json({ message: "Player not found" });
-    }
-
-    res.status(200).json({ message: "Player deleted successfully" });
-  } catch (error) {
-    console.error("Delete Player Error:", error);
-    res.status(500).json({ message: "Failed to delete player" });
-  }
-};*/
-
-
-
-
-
-
-
-
-
 const pool = require("../db");
 
 /* ================= CREATE PLAYER ================= */
@@ -150,7 +16,8 @@ exports.createPlayer = async (req, res) => {
       profile_image,
     } = req.body;
 
-    if (!player_id || !email || !name) {
+    if (!player_id || !email || !name)
+    {
       return res
         .status(400)
         .json({ message: "player_id, email and name are required" });
@@ -265,7 +132,8 @@ exports.updateAssessment = async (req, res) => {
 };
 
 /* ================= DELETE PLAYER ================= */
-exports.deletePlayer = async (req, res) => {
+exports.deletePlayer = async (req, res) => 
+  {
   try {
     const { id } = req.params;
 
@@ -274,12 +142,15 @@ exports.deletePlayer = async (req, res) => {
       [id]
     );
 
-    if (result.rowCount === 0) {
+    if (result.rowCount === 0)
+    {
       return res.status(404).json({ message: "Player not found" });
     }
 
     res.status(200).json({ message: "Player deleted successfully" });
-  } catch (error) {
+  } 
+  catch (error) 
+  {
     console.error("Delete Player Error:", error);
     res.status(500).json({ message: "Failed to delete player" });
   }
